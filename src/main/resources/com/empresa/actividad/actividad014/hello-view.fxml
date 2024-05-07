@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.empresa.actividad.actividad014.HelloController">
+      fx:controller="com.empresa.actividad.actividad014.RegistroController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
   </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+  <Label text="Registro de Usuario"/>
+  <TextField fx:id="correoField" promptText="Correo Electrónico"/>
+  <PasswordField fx:id="contrasenaField" promptText="Contraseña"/>
+  <PasswordField fx:id="confirmarContrasenaField" promptText="Confirmar Contraseña"/>
+  <TextField fx:id="fechaAltaField" promptText="Fecha de Alta (YYYY-MM-DD)"/>
+  <CheckBox fx:id="privacidadCheckbox" text="Acepto la política de privacidad"/>
+  <Button text="Registrarse" onAction="#onRegistrarseButtonClick"/>
+  <Button text="Inicio de Sesión" onAction="#onInicioSesionButtonClick"/>
+
 </VBox>
